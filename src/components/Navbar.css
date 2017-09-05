@@ -1,0 +1,10 @@
+.app-menu-bar-collapse {
+  background: #404040;
+  line-height: 46px;
+}
+
+.app-menu-bar-collapse i {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}

@@ -1,0 +1,13 @@
+section.app-section {
+	display: flex;
+	flex-wrap: wrap;
+    justify-content: center;
+    padding: 5%;
+}
+
+.app-section-card {
+	width: 240px;
+	margin: 20px;
+	flex-grow: 0;
+	flex-shrink: 0;
+}
