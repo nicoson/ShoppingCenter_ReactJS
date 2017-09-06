@@ -33,7 +33,6 @@ class ResponsiveMenu extends Component {
   }
 
   componentDidMount() {
-    console.log(this.props.direction);
   }
 
   render() {

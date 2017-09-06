@@ -7,25 +7,30 @@ class ProductList extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      list: []
     }
   }
 
   componentDidMount() {
-
+    fetch("products.json").then( function(res) {
+      return res.json();
+    }).then(
+      data => this.setState({list: data})
+    );
   }
 
   componentWillUnmount() {
   }
 
   render() {
-    let template = [1,2,3,4,5,6,7,8,9,10].map( index => (
+    let template = this.state.list.map( (item, index) => (
         <Card className="app-section-card" key={index}>
           <div className="custom-image">
-            <img alt="example" width="100%" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+            <img alt="example" width="100%" src={item.url} />
           </div>
           <div className="custom-card">
-            <h3>Europe Street beat</h3>
-            <p>www.instagram.com</p>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
           </div>
         </Card>
       )
